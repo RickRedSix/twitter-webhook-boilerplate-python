@@ -85,8 +85,6 @@ The current functionality when setup includes:
 	```
 	Subscription will be created for user the context provided by the access tokens. By default the tokens on the app page are the account that created the app.
 
-3. Test configuration by sending a DM to or from the subscribed account. You should receive a message event on your deployed webhook app.
-
 
 ## Deploy to Heroku (optional)
 
