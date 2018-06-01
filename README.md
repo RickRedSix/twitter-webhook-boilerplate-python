@@ -43,6 +43,8 @@ The current functionality when setup includes:
 
 3. Activate virtual environment:
 
+    Note that the included venv is Python 2.7 and this current code requires 3.6.x
+	
     ```bash
     source venv/bin/activate
     ```
