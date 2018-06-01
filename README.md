@@ -1,6 +1,7 @@
 # Twitter Webhook Boilerplate Python
 
-This is a work-in-progress port of a Twitter webhook server to Python 3.x
+This is a work-in-progress port of a Twitter webhook server to Python 3.x.
+Several TODOs are noted in the code, but this should be functional.
 
 Starter app / scripts for consuming events via Account Activity API.
 
@@ -59,6 +60,8 @@ The current functionality when setup includes:
     export CONSUMER_SECRET={INSERT_CONSUMER_SECRET}
     export ACCESS_TOKEN={INSERT_ACCESS_TOKEN}
     export ACCESS_TOKEN_SECRET={INSERT_ACCESS_TOKEN_SECRET}
+    export ENVNAME={INSERT_TWITTER_DEV_ENV_NAME}
+    export WEBHOOK_URL={WEBHOOK_URL_AFTER_DEPLOYMENT}
     ```
 
 6. Deploy app. To deploy to Heroku see "Deploy to Heroku" instructions below.
@@ -71,18 +74,20 @@ The current functionality when setup includes:
 
 ## Configure webhook to receive events via the API
 
-1. Create webhook config. Update `WEBHOOK_URL` in source code of example_scripts/create-webhook.py.
+1. Create webhook config.
 
     ```bash
     python example_scripts/create-webhook.py
     ```
-    Take note of returned `webhook_id`.
 
-2. Add user subscription. Update `WEBHOOK_ID` in source code of example_scripts/subscribe-account.py.
+    (Take note of returned `webhook_id`).
+
+2. Add user subscription.
 
     ```bash
     python example_scripts/subscribe-account.py
     ```
+
     Subscription will be created for user the context provided by the access tokens. By default the tokens on the app page are the account that created the app.
 
 ## Deploy to Heroku (optional)
@@ -93,7 +98,7 @@ The current functionality when setup includes:
     heroku create
     ```
 
-2. Run locally. (This won't do recieve the events as you'll have to configure the webhook URL above as the Heroku URL)
+2. Run locally. (This won't do receive the events as you'll have to configure the webhook URL above as the Heroku URL)
 
     ```bash
     heroku local
