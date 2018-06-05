@@ -35,6 +35,6 @@ def processDirectMessageEvent(eventObj):
 def processLikeEvent(eventObj):
     userHandle = eventObj.get('user', {}).get('screen_name')
     
-    print 'This user liked one of your tweets: %s' % userHandle 
+    print ('This user liked one of your tweets: %s' % userHandle) 
     
     return None           
