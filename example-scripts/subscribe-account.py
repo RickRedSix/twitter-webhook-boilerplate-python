@@ -16,7 +16,7 @@ WEBHOOK_ID = '{ID HERE}'
 
 twitterAPI = TwitterAPI(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
-r = twitterAPI.request('account_activity/all/:%s/subscriptions' % ENVNAME, {'webhook_id': WEBHOOK_ID})
+r = twitterAPI.request('account_activity/all/:%s/subscriptions' % ENVNAME, {'webhook_id': WEBHOOK_ID}, None, 'POST')
 
 print r.text
        
