@@ -79,7 +79,7 @@ The current functionality when setup includes:
 1. Create webhook config.
 
     ```bash
-    python example_scripts/create-webhook.py
+    python example-scripts/create-webhook.py
     ```
 
     (Take note of returned `webhook_id`).
@@ -87,7 +87,7 @@ The current functionality when setup includes:
 2. Add user subscription.
 
     ```bash
-    python example_scripts/subscribe-account.py
+    python example-scripts/subscribe-account.py
     ```
 
     Subscription will be created for user the context provided by the access tokens. By default the tokens on the app page are the account that created the app.
